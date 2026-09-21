@@ -1,12 +1,204 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Phillip — Software & Machine Learning</title>
+    <meta name="description" content="Portfolio of Philip — software and machine learning projects: RAG systems, NLP classification, LLM security, and predictive modelling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Phillip</h1>
-    <p>hello there</p>
+
+
+<header class="site-header">
+    <nav class="container nav">
+        <a href="#top" class="wordmark">Phillip<span class="accent">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero container">
+        <p class="kicker">Hello there, I'm</p>
+        <h1>Phillip</h1>
+        <p class="hero-role">Data, AI &amp; Machine Learning</p>
+        <p class="hero-tagline reveal">
+            I build machine learning systems end to end, from data pipelines and
+            model training to APIs and deployment.
+        </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn" href="https://github.com/philipogn" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/phillipngo17/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </section>
+
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section container reveal">
+        <h2><span class="section-num">01</span> About</h2>
+        <p class="about-text">
+            I'm a developer focused on machine learning and data-driven software.
+            My recent work spans retrieval-augmented generation, NLP classification,
+            LLM security research, and predictive modelling, usually taken all the
+            way from raw data to a deployed, containerised service. I'm currently
+            looking for data science, software and AI/ML engineering opportunities.
+        </p>
+    </section>
+
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section container">
+        <h2 class="reveal"><span class="section-num">02</span> Projects</h2>
+        <div class="project-grid">
+
+            <article class="card reveal">
+                <div class="card-body">
+                    <h3><a href="https://github.com/philipogn/rag_research_assistant" target="_blank" rel="noopener">RAG Research Assistant</a></h3>
+                    <p>
+                        Locally hosted retrieval-augmented generation system for querying
+                        research papers through a chat interface. PDFs are converted to
+                        markdown, chunked, and embedded in a vector database; answers are
+                        grounded with per-page source citations. Runs fully offline with
+                        local models and Docker Compose.
+                    </p>
+                </div>
+                <ul class="tags">
+                    <li>Python</li><li>FastAPI</li><li>ChromaDB</li><li>Ollama</li><li>Docker</li>
+                </ul>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-body">
+                    <h3><a href="https://github.com/philipogn/powerlifting_statistics" target="_blank" rel="noopener">Powerlifting Total Predictor</a></h3>
+                    <p>
+                        Predicts a powerlifter's next competition total from 150,000+ IPF
+                        records in the OpenPowerlifting database. An XGBoost model cuts
+                        prediction error by 17% versus a persistence baseline
+                        (19.1&nbsp;kg MAE, R²&nbsp;0.959), served through both a REST API
+                        and a Streamlit UI.
+                    </p>
+                </div>
+                <ul class="tags">
+                    <li>Python</li><li>pandas</li><li>XGBoost</li><li>scikit-learn</li><li>FastAPI</li><li>Streamlit</li><li>Docker</li>
+                </ul>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-body">
+                    <h3><a href="https://github.com/philipogn/attention-nlp-detector" target="_blank" rel="noopener">Prompt-Injection Detector</a></h3>
+                    <p>
+                        Detects prompt-injection attacks against open-source LLMs by classifying
+                        statistical features of attention weights (entropy, variance,
+                        TF-IDF). The best configuration (LLaMA&nbsp;3.2&nbsp;1B + Support Vector Machine) reaches 71% accuracy on unseen data, 
+                        outperforming competing detection tools.
+                    </p>
+                </div>
+                <ul class="tags">
+                    <li>Python</li><li>PyTorch</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li>
+                    <li>Hugging Face</li><li>LLaMA</li><li>LLM security</li>
+                </ul>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-body">
+                    <h3>
+                        <a href="https://github.com/philipogn/political-ideology-analysis" target="_blank" rel="noopener">Political Ideology Analysis</a>
+                        <span class="badge-wip">WIP</span>
+                    </h3>
+                    <p>
+                        Places news articles on the political compass using a two-stage
+                        transformer pipeline: one model first filters for political
+                        content, then a fine-tuned DeBERTa classifier scores the
+                        article's political leaning, a task general-purpose MNLI
+                        classifiers handle poorly.
+                    </p>
+                </div>
+                <ul class="tags">
+                    <li>Python</li><li>PostgreSQL</li><li>Transformers</li><li>DeBERTa</li><li>NLP</li>
+                </ul>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-body">
+                    <h3><a href="https://github.com/philipogn/financial_sanctions" target="_blank" rel="noopener">UK Sanctions Data Pipeline</a></h3>
+                    <p>
+                        Cleans the UK financial sanctions list into an analysis-ready
+                        dataset: standardising names and aliases, consolidating scattered
+                        address fields, and preserving partial dates across ~4,000
+                        individual records, prioritising data integrity over aggressive
+                        automation.
+                    </p>
+                </div>
+                <ul class="tags">
+                    <li>Python</li><li>pandas</li><li>NumPy</li><li>Data engineering</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section container reveal">
+        <h2><span class="section-num">03</span> Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h3>Languages</h3>
+                <ul class="tags">
+                    <li>Python</li><li>SQL</li><li>Java</li><li>JavaScript</li><li>C</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h3>ML &amp; Data</h3>
+                <ul class="tags">
+                    <li>PyTorch</li><li>Hugging Face Transformers</li><li>XGBoost</li>
+                    <li>scikit-learn</li><li>pandas</li><li>NumPy</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h3>Tools</h3>
+                <ul class="tags">
+                    <li>Docker</li><li>FastAPI</li><li>Streamlit</li>
+                    <li>ChromaDB</li><li>Ollama</li><li>Git</li><li>Jupyter Notebook</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section container reveal">
+        <h2><span class="section-num">04</span> Contact</h2>
+        <p class="contact-text">
+            I'm open to software and machine learning roles — feel free to reach out
+            or look through my work.
+        </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/philipogn" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/phillipngo17/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© <span id="year"></span> Phillip Ngo</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
